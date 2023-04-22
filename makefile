@@ -11,7 +11,10 @@ test:
 
 
 docker-build:
-	docker build -t ecs-change:latest .
+	docker build -t ltskinner/ecs-change:latest .
 
 docker-run-it-rm:
-	docker run -it -p 80:8080 --rm ecs-change
+	docker run -it -p 80:8080 --rm ltskinner/ecs-change
+
+docker-push:
+	docker push ltskinner/ecs-change:latest
